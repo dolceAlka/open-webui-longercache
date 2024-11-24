@@ -328,7 +328,7 @@ async def get_all_models_responses() -> list:
     return responses
 
 
-@cached(ttl=3)
+@cached(ttl=900)
 async def get_all_models() -> dict[str, list]:
     log.info("get_all_models()")
 
