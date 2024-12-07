@@ -108,7 +108,7 @@ async function* streamLargeDeltasAsRandomChunks(
 			continue;
 		}
 		while (content != '') {
-			const chunkSize = Math.min(Math.floor(Math.random() * 5) + 1, content.length);
+			const chunkSize = Math.min(4, content.length);
 			const chunk = content.slice(0, chunkSize);
 			yield { done: false, value: chunk };
 			// Do not sleep if the tab is hidden
